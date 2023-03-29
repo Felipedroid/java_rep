@@ -11,19 +11,15 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Digite a altura do retângulo: ");
-		double altura = sc.nextDouble();
-		System.out.println("Dgite a largura do retângulo: ");
-		double largura = sc.nextDouble();
+		System.out.println("Informe o valor do raio: ");
+		double radius = sc.nextDouble();
 		
-		Retangulo retangulo1 = new Retangulo();
-		retangulo1.altura = altura;
-		retangulo1.largura = largura;
+		double circunferencia = Calculator.circunference(radius);
 		
-		System.out.println(retangulo1.calcularArea());
-		System.out.println(retangulo1.calculaPerimetro());
-		System.out.println(retangulo1.calculaDiagonal());
+		System.out.printf("Circunferência é  %.2f%n", circunferencia);
+		System.out.printf("O valor de PI é %.2f%n", Calculator.PI);
 		
+		sc.close();
 	}
 
 }
